@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// Start point
 void main() {
   runApp(new MyApp());
 }
@@ -56,15 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
     var random = Random();
     var meal = _mealList[random.nextInt(_mealList.length)];
 
+
     setState(() {
-      _currentMeal = meal;
-      _currentSubjective = _defaultSubjective;
 
       if (meal == _currentMeal) {
         _confirmVisibity = true;
       } else {
         _confirmVisibity = false;
       }
+
+      _currentMeal = meal;
+
+      
     });
   }
 
